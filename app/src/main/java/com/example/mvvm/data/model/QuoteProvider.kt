@@ -1,8 +1,13 @@
-package com.example.mvvm.model
+package com.example.mvvm.data.model
+
+import java.util.Collections.emptyList
 
 class QuoteProvider {
     companion object {
 
+        var quotes: List<QuoteModel> = emptyList()
+
+        /*
         fun random(): QuoteModel {
             val position = (0..9).random()
             return quotes[position]
@@ -37,12 +42,19 @@ class QuoteProvider {
                 quote = "My code DOESN’T work, I have no idea why. My code WORKS, I have no idea why.",
                 author = "Anonymous"
             ),
-            QuoteModel(quote = "Things aren’t always #000000 and #FFFFFF", author = "Anonymous"),
-            QuoteModel(quote = "Talk is cheap. Show me the code.", author = "Linus Torvalds"),
+            QuoteModel(
+                quote = "Things aren’t always #000000 and #FFFFFF",
+                author = "Anonymous"
+            ),
+            QuoteModel(
+                quote = "Talk is cheap. Show me the code.",
+                author = "Linus Torvalds"
+            ),
             QuoteModel(
                 quote = "Software and cathedrals are much the same — first we build them, then we pray.",
                 author = "Anonymous"
             )
         )
+        */
     }
 }

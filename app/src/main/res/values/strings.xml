@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MVVM</string>
+    <string name="error_quote">Error Quote</string>
+    <string name="error_author">Error Author</string>
+    <string name="loading">Cargando...</string>
 </resources>
