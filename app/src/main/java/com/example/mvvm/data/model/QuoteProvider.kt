@@ -1,11 +1,14 @@
 package com.example.mvvm.data.model
 
+import java.util.Collections.emptyList
+
 class QuoteProvider {
     companion object {
 
         var quotes: List<QuoteModel> = emptyList()
 
-        /*fun random(): QuoteModel {
+        /*
+        fun random(): QuoteModel {
             val position = (0..9).random()
             return quotes[position]
         }
@@ -51,6 +54,7 @@ class QuoteProvider {
                 quote = "Software and cathedrals are much the same — first we build them, then we pray.",
                 author = "Anonymous"
             )
-        )*/
+        )
+        */
     }
 }

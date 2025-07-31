@@ -5,11 +5,11 @@ import com.example.mvvm.data.model.QuoteModel
 import com.example.mvvm.data.model.QuoteProvider
 
 class GetRandomQuoteUseCase {
-    private val repository = QuoteRepository()
+    //private val repository = QuoteRepository()
 
     operator fun invoke(): QuoteModel? {
         val quotes = QuoteProvider.quotes
-        if (!quotes.isNullOrEmpty()) {
+        if (quotes.isNotEmpty()) {
             // val randomNumber = (0..quotes.size-1).random()
             val randomNumber = (quotes.indices).random()
             return quotes[randomNumber]

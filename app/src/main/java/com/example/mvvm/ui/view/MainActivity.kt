@@ -5,6 +5,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
+import com.example.mvvm.R
 import com.example.mvvm.databinding.ActivityMainBinding
 import com.example.mvvm.ui.viewmodel.QuoteViewModel
 
@@ -22,8 +23,14 @@ class MainActivity : AppCompatActivity() {
         quoteViewModel.onCreate()
 
         quoteViewModel.quoteModelLiveData.observe(this, Observer {
-            binding.tvQuote.text = it.quote
-            binding.tvAuthor.text = it.author
+            if (it != null) { binding.tvQuote.text = it.quote }
+            else { binding.tvQuote.text = R.string.error_quote.toString() }
+
+            if (it != null) {
+                binding.tvAuthor.text = it.author
+            } else {
+                binding.tvAuthor.text = R.string.error_author.toString()
+            }
         })
 
         quoteViewModel.isLoading.observe(this, Observer {
